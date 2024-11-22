@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: "Comic Neue", cursive;
+    scroll-behavior: smooth;
+    background: #252a38;
+    height: 100%;
+}
+
+.cookie {
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+    border-radius: 50%;
+  }
+  
