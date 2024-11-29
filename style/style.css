@@ -18,4 +18,8 @@ html{
     background-color: #555;
     border-radius: 50%;
   }
+
+.info > h1{
+    color: #eee;
+};
   

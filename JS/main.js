@@ -1,6 +1,4 @@
-var bluevalue = 150;
-var greenvalue = 150;
-var redvalue = 150;
+
 var score = 0;
 var clicks = 0;
 
