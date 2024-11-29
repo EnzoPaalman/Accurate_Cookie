@@ -1,33 +1,172 @@
-*{
+/* General Reset */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 62.5%;
     font-family: "Comic Neue", cursive;
     scroll-behavior: smooth;
     background: #252a38;
     height: 100%;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.cookie {
-    height: 50px;
-    width: 50px;
-    background-color: #555;
-    border-radius: 50%;
-  }
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #1e232d;
+}
 
-.info > h1{
+/* Settings Panel */
+.settings {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.settings label {
+    margin-right: 10px;
+    font-size: 1.6rem;
+}
+
+.settings input, .settings select {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    background-color: #333;
+    color: #fff;
+}
+
+.settings button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.settings button:hover {
+    background-color: #45a049;
+}
+
+/* Game Panel */
+.game-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #252a38;
+    width: 100%;
+    height: 100%;
+}
+
+.game-panel__area {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: #3e4a5c;
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    overflow: hidden;
+}
+
+/* Cookie Styling */
+#cookie {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #f8b400;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Information Panel */
+.info {
+    margin-top: 20px;
+    text-align: center;
     color: #eee;
-};
-  
+}
+
+.info > h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Timer and Score Elements */
+#timer, #CPS, #RAWCPS, #score, #accuracy {
+    font-size: 1.8rem;
+}
+
+/* Timer and Score Styling */
+#score {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#accuracy {
+    font-size: 2rem;
+    color: #d1d100;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .game-panel__area {
+        width: 90%;
+        height: 300px;
+    }
+
+    .settings {
+        font-size: 1.4rem;
+    }
+
+    .settings input,
+    .settings select,
+    .settings button {
+        font-size: 1.2rem;
+    }
+
+    .info > h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-panel__area {
+        width: 90%;
+        height: 200px;
+    }
+
+    .settings {
+        font-size: 1.2rem;
+    }
+
+    .settings input,
+    .settings select,
+    .settings button {
+        font-size: 1.1rem;
+    }
+
+    .info > h1 {
+        font-size: 1.4rem;
+    }
+}

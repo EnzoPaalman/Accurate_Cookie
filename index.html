@@ -11,23 +11,29 @@
     <title>Color Clicker Game</title>
 </head>
 <body>
-    <img id="cookie" src="img/cookie.png" style="position: absolute; width: 50px; height: 50px;" />
-    <div class="info">
-        <h1 id="timer">
-            Time: 0
-        </h1>
-        <h1 id="CPS">
-            CPS: 0
-        </h1>
-        <h1 id="RAWCPS">
-            Raw CPS: 0
-        </h1>
-        <h1 id="score">
-            Score: 0
-        </h1>
-        <h1 id="accuracy">
-            Accuracy: 0%
-        </h1>
+    <div class="settings">
+        <h1>Set Game Time and Difficulty</h1>
+        <label for="game-time">Game Time (seconds):</label>
+        <input type="number" id="game-time" min="10" max="120" step="10" value="30">
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <button id="start-game">Start Game</button>
+    </div>
+    <div class="game-panel">
+        <div class="game-panel__area">
+            <img id="cookie" src="img/cookie.png" style="display: none; position: absolute;" />
+        </div>
+        <div class="info">
+            <h1 id="timer">Time: 0</h1>
+            <h1 id="CPS">CPS: 0</h1>
+            <h1 id="RAWCPS">Raw CPS: 0</h1>
+            <h1 id="score">Score: 0</h1>
+            <h1 id="accuracy">Accuracy: 0%</h1>
+        </div>
     </div>
 </body>
 </html>
